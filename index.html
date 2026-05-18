@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chanel & Rozleigh - Wedding Celebration 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #0a0a08;
+            color: #e5e5e5;
+            line-height: 1.6;
+        }
+
+        /* Hero Section with Split Layout */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            overflow: hidden;
+            background-color: #0a0a08;
+        }
+
+        @media (max-width: 968px) {
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+        }
+
+        .hero-left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+            background-color: #0a0a08;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-right {
+            background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%);
+            position: relative;
+            overflow: hidden;
+            display: none;
+        }
+
+        @media (min-width: 968px) {
+            .hero-right {
+                display: block;
+            }
+        }
+
+        .hero-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 500px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content .tagline {
+            letter-spacing: 0.15em;
+            color: #b8956a;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            color: #c9a66b;
+            letter-spacing: 0.1em;
+            font-weight: normal;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero-content .and {
+            font-size: 1.8rem;
+            font-style: italic;
+            color: #b8956a;
+            margin: 0.5rem 0;
+            font-weight: normal;
+        }
+
+        .hero-content .invite-text {
+            letter-spacing: 0.12em;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin: 2rem 0;
+            color: #b8956a;
+            font-weight: 600;
+        }
+
+        .heart-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .heart-divider span {
+            height: 1px;
+            width: 3rem;
+            background-color: #b8956a;
+        }
+
+        .heart-divider svg {
+            width: 0.75rem;
+            height: 0.75rem;
+            color: #b8956a;
+            fill: #b8956a;
+        }
+
+        .hero-content .date {
+            font-size: 1.8rem;
+            color: #c9a66b;
+            letter-spacing: 0.15em;
+            margin-top: 2rem;
+            font-weight: 600;
+        }
+
+        /* Photo Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            margin: 0;
+            background-color: #0a0a08;
+        }
+
+        @media (max-width: 968px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .gallery-item {
+            aspect-ratio: 1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Details Section */
+        .details {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+            background-color: #0a0a08;
+        }
+
+        @media (max-width: 640px) {
+            .details {
+                padding: 3rem 1rem;
+            }
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-title h2 {
+            font-style: italic;
+            font-size: 2.5rem;
+            color: #b8956a;
+            margin-bottom: 0;
+            font-weight: normal;
+            letter-spacing: 0.05em;
+        }
+
+        /* Detail Cards Grid */
+        .detail-cards {
+            display: grid;
+            gap: 0;
+            margin-bottom: 4rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .detail-cards.grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .detail-cards.grid-4-alt {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media (max-width: 968px) {
+            .detail-cards.grid-4,
+            .detail-cards.grid-4-alt {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .detail-cards.grid-4,
+            .detail-cards.grid-4-alt {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .detail-card {
+            border: 1px solid rgba(184, 149, 106, 0.3);
+            padding: 2rem 1.5rem;
+            background-color: transparent;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .detail-card:hover {
+            border-color: rgba(201, 166, 107, 0.6);
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .detail-card svg {
+            width: 2rem;
+            height: 2rem;
+            color: #b8956a;
+            margin: 0 auto 1rem;
+            stroke-width: 1.5;
+        }
+
+        .detail-card h3 {
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.8rem;
+            color: #b8956a;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .detail-card p {
+            font-size: 0.85rem;
+            color: #d0d0d0;
+            line-height: 1.6;
+            letter-spacing: 0.02em;
+        }
+
+        /* Two Column Section */
+        .two-column-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            max-width: 1200px;
+            margin: 4rem auto 0;
+            background-color: #0a0a08;
+        }
+
+        @media (max-width: 768px) {
+            .two-column-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .two-column-item {
+            border: 1px solid rgba(184, 149, 106, 0.3);
+            padding: 2rem;
+        }
+
+        .two-column-item svg {
+            width: 1.8rem;
+            height: 1.8rem;
+            color: #b8956a;
+            margin-bottom: 1rem;
+        }
+
+        .two-column-item h2 {
+            font-style: italic;
+            font-size: 1.5rem;
+            color: #b8956a;
+            margin-bottom: 1rem;
+            font-weight: normal;
+            letter-spacing: 0.05em;
+        }
+
+        .two-column-item p {
+            font-size: 0.85rem;
+            color: #d0d0d0;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.01em;
+        }
+
+        .qr-code {
+            background-color: white;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            display: inline-block;
+            margin: 1rem 0;
+        }
+
+        .qr-code img {
+            display: block;
+            width: 100px;
+            height: 100px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            border: 1px solid #b8956a;
+            color: #b8956a;
+            padding: 0.6rem 1.5rem;
+            border-radius: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.7rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: 'Georgia', serif;
+            cursor: pointer;
+            background: none;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background-color: #b8956a;
+            color: #0a0a08;
+        }
+
+        /* Venue Section */
+        .venue-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 1px solid rgba(184, 149, 106, 0.3);
+            background-color: #0a0a08;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .venue-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .venue-content {
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .venue-content svg {
+            width: 1.8rem;
+            height: 1.8rem;
+            color: #b8956a;
+            margin-bottom: 1rem;
+        }
+
+        .venue-content h2 {
+            font-style: italic;
+            font-size: 1.5rem;
+            color: #b8956a;
+            margin-bottom: 1rem;
+            font-weight: normal;
+            letter-spacing: 0.05em;
+        }
+
+        .venue-content p {
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 0.75rem;
+            color: #888;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .venue-map {
+            background-color: #151512;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+
+        .venue-map img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 4rem 2rem 2rem;
+            background-color: #0a0a08;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 50px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50"><path d="M20 45 Q30 35 50 45 Q70 35 80 45" stroke="%23b8956a" fill="none" stroke-width="2"/><circle cx="30" cy="40" r="2" fill="%23b8956a"/><circle cx="70" cy="40" r="2" fill="%23b8956a"/></svg>') no-repeat center;
+            background-size: contain;
+        }
+
+        footer svg {
+            width: 1.2rem;
+            height: 1.2rem;
+            color: #b8956a;
+            fill: #b8956a;
+            margin-bottom: 1rem;
+        }
+
+        footer p:first-of-type {
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.75rem;
+            color: #888;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        footer h3 {
+            font-style: italic;
+            font-size: 1.5rem;
+            color: #b8956a;
+            font-weight: normal;
+            letter-spacing: 0.05em;
+        }
+
+        footer p:last-of-type {
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #b8956a;
+            margin-top: 0.5rem;
+            font-weight: normal;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .two-column-item,
+            .venue-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-left">
+            <div class="hero-content">
+                <p class="tagline">Together with our families and friends</p>
+                <h1>CHANEL</h1>
+                <p class="and">and</p>
+                <h1>ROZLEIGH</h1>
+                <p class="invite-text">Invite you to celebrate our wedding</p>
+                <div class="heart-divider">
+                    <span></span>
+                    <svg fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    <span></span>
+                </div>
+                <p class="date">8 AUGUST 2026</p>
+            </div>
+        </div>
+        <div class="hero-right">
+            <img src="https://via.placeholder.com/600x800?text=Chanel+%26+Rozleigh" alt="Chanel and Rozleigh">
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="gallery">
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/400x400?text=Photo+1" alt="Engagement photo 1">
+        </div>
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/400x400?text=Photo+2" alt="Engagement photo 2">
+        </div>
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/400x400?text=Photo+3" alt="Engagement photo 3">
+        </div>
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/400x400?text=Photo+4" alt="Engagement photo 4">
+        </div>
+    </section>
+
+    <!-- Details Section -->
+    <section class="details">
+        <div class="section-title">
+            <h2>The Details</h2>
+        </div>
+
+        <!-- First Row: 4 Details -->
+        <div class="detail-cards grid-4">
+            <div class="detail-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <h3>Ceremony</h3>
+                <p>14:00</p>
+            </div>
+
+            <div class="detail-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <h3>Venue</h3>
+                <p>The Homestead Venue<br>Plumstead</p>
+            </div>
+
+            <div class="detail-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M6 4h12v14H6z"></path>
+                    <path d="M6 4l-1 4h14l-1-4"></path>
+                    <line x1="9" y1="9" x2="15" y2="9"></line>
+                </svg>
+                <h3>Dress Code</h3>
+                <p>All Black</p>
+            </div>
+
+            <div class="detail-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <polyline points="20 21 14 15"></polyline>
+                    <circle cx="10" cy="10" r="6"></circle>
+                </svg>
+                <h3>Gifts</h3>
+                <p>Your presence is the greatest gift of all. Should you wish to give a gift, we would appreciate a monetary contribution towards our future together.</p>
+            </div>
+        </div>
+
+        <!-- Second Row: Other Information -->
+        <div class="section-title" style="margin-top: 4rem;">
+            <h2>Other Information</h2>
+        </div>
+
+        <div class="detail-cards grid-4-alt">
+            <div class="detail-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M18 8h1a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V12a4 4 0 0 1 4-4h1V6a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2z"></path>
+                </svg>
+                <h3>Cash Bar</h3>
+                <p>A cash bar will be available.</p>
+            </div>
+
+            <div class="detail-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <h3>Regret</h3>
+                <p>No children.</p>
+            </div>
+
+            <div class="detail-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="1"></circle>
+                    <path d="M12 1v6m0 6v6"></path>
+                    <path d="M4.22 4.22l4.24 4.24m1.08 1.08l4.24 4.24"></path>
+                    <path d="M1 12h6m6 0h6"></path>
+                    <path d="M4.22 19.78l4.24-4.24m1.08-1.08l4.24-4.24"></path>
+                </svg>
+                <h3>Parking</h3>
+                <p>Parking is managed by Food Fanatics. It is located at the back of the property. Entrance & parking are located on Bardia Road, which runs parallel to Constantia Main Road.</p>
+            </div>
+
+            <div class="detail-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <h3>Location</h3>
+                <p>Click below to view the venue on Google Maps.</p>
+            </div>
+        </div>
+
+        <!-- Two Column Section -->
+        <div class="two-column-section">
+            <div class="two-column-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                    <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+                <h2>Share the Love</h2>
+                <p>Help us capture our special day. Scan the QR code to upload your photos and videos.</p>
+                <div class="qr-code">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://drive.google.com/drive/folders/1VcLHd0os4SGlbZUB3Lk4AWO627NPBY0u" alt="QR code for photo upload">
+                </div>
+            </div>
+
+            <div class="two-column-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <h2>Dietary Requirements</h2>
+                <p>Please let us know of any dietary requirements or allergies by 15 June 2026.</p>
+                <button class="btn">Let Us Know</button>
+            </div>
+        </div>
+
+        <!-- Venue Section -->
+        <div class="venue-section" style="margin-top: 0;">
+            <div class="venue-content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <h2>The Homestead Venue</h2>
+                <p>20 Bardia Road, Plumstead, 7800</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=The+Homestead+Venue+23+Bardia+Road+Plumstead+Cape+Town" class="btn" target="_blank">View on Google Maps</a>
+            </div>
+            <div class="venue-map">
+                <img src="https://via.placeholder.com/600x300?text=Google+Maps" alt="Venue location map">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+        <p>We can't wait to celebrate this special day with you!</p>
+        <p style="font-style: italic; font-size: 0.95rem; color: #b8956a; margin-bottom: 0.5rem;">with love,</p>
+        <h3>CHANEL & ROZLEIGH</h3>
+    </footer>
+</body>
+</html>
